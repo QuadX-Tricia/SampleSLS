@@ -1,0 +1,16 @@
+provider:
+  name: sls-offline
+
+service: sls-offline
+
+functions:
+  ok:
+    handler: Handlers/Ok.create
+    events:
+      - http:
+          path: ok
+          method: post
+          cors: true
+
+plugins:
+  - serverless-offline
