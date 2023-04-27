@@ -4,11 +4,11 @@ provider:
 service: sls-offline
 
 functions:
-  ok:
-    handler: Handlers/Ok.create
+  generateGreetings:
+    handler: Handlers/Greeting.generate
     events:
       - http:
-          path: ok
+          path: greetings
           method: post
           cors: true
 

@@ -1,0 +1,42 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "required": [
+    	"data"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      	"data": {
+        	"type": "object",
+            "required": [
+            	"attributes"
+            ],
+            "additionalProperties": false,
+            "properties": {
+            	"attributes": {
+                	"type": "object",
+                    "required": [
+                        "name"
+                    ],
+                    "additionalProperties": false,
+                   	"properties": {
+                    	"name": {
+                            "type": "string",
+                            "minLength": 5,
+                            "maxLength": 50,
+                            "pattern": "^[A-Za-z]*$"
+                        },
+                        "greeting": {
+                            "type": "string",
+                            "enum": [
+                                "Good Morning",
+                                "Good Afternoon",
+                                "Good Evening"
+                			]
+        				}
+                    }
+                }
+            }
+        }
+    }
+}
