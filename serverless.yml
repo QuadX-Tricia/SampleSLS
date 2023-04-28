@@ -11,6 +11,13 @@ functions:
           path: greetings
           method: post
           cors: true
+  generatePigLatin:
+    handler: Handlers/PigLatin.generate
+    events:
+      - http:
+          path: piglatins
+          method: post
+          cors: true
 
 plugins:
   - serverless-offline
